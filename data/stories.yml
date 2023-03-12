@@ -1,0 +1,446 @@
+version: "3.1"
+
+stories:
+
+- story: initial path
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: mood_great
+  - action: utter_happy
+  - intent: back
+  - action: utter_start
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: back
+  - action: utter_start
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+  - intent: back
+  - action: utter_start
+
+# SEZIONE 1 ACQUISTI
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: back
+  - action: utter_start
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: general_info
+  - action: utter_general_info
+  - intent: back
+  - action: utter_start
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: categories_info
+  - action: show_category_list
+  - intent: back
+  - action: utter_start
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: brands_info
+  - action: show_brand_list
+  - intent: back
+  - action: utter_start
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: select_category
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: select_category
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+  - intent: deny
+  - action: action_restart
+
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: select_category
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+  - intent: back
+  - action: utter_purchasing_section
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: select_brand
+    entities:
+    - brand: samsung
+  - slot_was_set:
+    - brand: samsung
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+  - intent: deny
+  - action: action_restart
+
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: select_brand
+    entities:
+    - brand: xiaomi
+  - slot_was_set:
+    - brand: xiaomi
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+  - intent: back
+  - action: utter_purchasing_section
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: categories_info
+  - action: show_category_list
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: brands_info
+  - action: show_brand_list
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: categories_info
+  - action: show_category_list
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: brands_info
+  - action: show_brand_list
+  
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: select_category
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: select_brand
+    entities:
+    - brand: apple
+  - slot_was_set:
+    - brand: apple
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+
+################
+
+- story: interactive_story
+  steps:
+  - action: utter_ask_if_buy_product
+  - intent: deny
+  - action: action_restart
+
+
+- story: interactive_story
+  steps:
+  - action: utter_ask_if_buy_product
+  - intent: affirm
+  - action: purchase_form
+  - active_loop: purchase_form
+
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: control_products
+  - action: auth_form
+  - active_loop: auth_form
+
+
+# SELLING
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: selling_products
+  - action: utter_ask_if_sell_product
+
+- story: interactive_story
+  steps:
+  - action: utter_ask_if_sell_product
+  - intent: deny
+  - action: action_restart
+
+
+- story: interactive_story
+  steps:
+  - action: utter_ask_if_sell_product
+  - intent: affirm
+  - action: selling_form
+  - active_loop: selling_form
+
+#QUIII
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: control_products
+  - action: auth_form
+  - active_loop: auth_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: user1@gmail.com
+  - slot_was_set:
+    - email: user1@gmail.com
+  - slot_was_set:
+    - requested_slot: confirm_auth
+  - slot_was_set:
+    - confirm_auth: yes
+  - slot_was_set:
+    - confirm_auth: yes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: show_own_product_list
+  - intent: go_back
+  - action: utter_start
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: categories_info
+  - action: show_category_list
+  - intent: go_back
+  - action: utter_general_info
+  - intent: brands_info
+  - action: show_brand_list
+  - intent: go_back
+  - action: utter_general_info
+  - intent: go_back
+  - action: utter_start
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: go_back
+  - action: utter_start
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: go_back
+  - action: utter_purchasing_section
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: categories_info
+  - intent: select_category
+    entities:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+  - intent: deny
+  - action: action_restart
+
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: brands_info
+  - action: show_brand_list
+  - intent: select_brand
+    entities:
+    - brand: xiaomi
+  - slot_was_set:
+    - brand: xiaomi
+  - action: show_all_product_list
+  - action: utter_ask_if_buy_product
+  - intent: deny
+  - action: action_restart
+
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: brands_info  
+  - action: show_brand_list
+  - intent: go_back
+  - action: utter_general_info
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: categories_info  
+  - action: show_category_list
+  - intent: go_back
+  - action: utter_general_info
+
+
+- story: interactive_story
+  steps:
+  - intent: nlu_fallback
+  - action: utter_retry
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: general_info
+  - action: utter_general_info
+  - intent: reset
+  - action: action_restart
+
+- story: interactive_story
+  steps:
+  - intent: greet
+  - action: utter_start
+  - intent: acquire_products
+  - action: utter_purchasing_section
+  - intent: reset
+  - action: action_restart
+
+- story: interactive_story
+  steps:
+  - action: utter_start
+  - intent: selling_products
+  - action: utter_ask_if_sell_product
+  - intent: affirm
+  - action: selling_form
+  - active_loop: selling_form
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: stop
+  - slot_was_set:
+    - category: stop
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_save_selling
+  - action: action_restart

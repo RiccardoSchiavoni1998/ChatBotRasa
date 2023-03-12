@@ -1,0 +1,227 @@
+version: '3.1'
+intents:
+- acquire_products
+- affirm
+- bot_challenge
+- brands_info
+- categories_info
+- control_products
+- deactivate_form
+- deny
+- general_info
+- go_back
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- nlu_fallback
+- reset
+- select_brand
+- select_category
+- selling_products
+actions:
+- action_save_purchase
+- action_save_selling
+- action_slot_reset
+- show_all_product_list
+- show_brand_list
+- show_category_list
+- show_own_product_list
+- utter_ask_if_buy_product
+- utter_ask_if_sell_product
+- utter_general_info
+- utter_happy
+- utter_iamabot
+- utter_purchasing_section
+- utter_start
+- validate_auth_form
+- validate_purchase_form
+- validate_selling_form
+entities:
+- brand
+- category
+- email
+slots:
+  category:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: category
+    - type: from_text
+      conditions:
+      - active_loop: selling_form
+        requested_slot: category
+  brand:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: brand
+    - type: from_text
+      conditions:
+      - active_loop: selling_form
+        requested_slot: brand
+  product_model:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: selling_form
+        requested_slot: product_model
+  product_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: purchase_form
+        requested_slot: product_id
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: purchase_form
+        requested_slot: email
+      - active_loop: selling_form
+        requested_slot: email
+      - active_loop: auth_form
+        requested_slot: email
+  price:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: selling_form
+        requested_slot: price
+  confirm_purchase:
+    type: categorical
+    values:
+    - yes
+    - no
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: purchase_form
+        requested_slot: confirm_purchase
+  confirm_selling:
+    type: categorical
+    values:
+    - yes
+    - no
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: selling_form
+        requested_slot: confirm_selling
+  confirm_auth:
+    type: categorical
+    values:
+    - yes
+    - no
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: auth_form
+        requested_slot: confirm_auth
+forms:
+  purchase_form:
+    required_slots:
+    - product_id
+    - email
+    - confirm_purchase
+  selling_form:
+    required_slots:
+    - category
+    - brand
+    - product_model
+    - price
+    - email
+    - confirm_selling
+  auth_form:
+    required_slots:
+    - email
+    - confirm_auth
+responses:
+  utter_start:
+  - text: |
+      Hey! What can i do for you?
+         - Buy products
+         - Sell products
+         - Control your products
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_retry:
+  - text: I can't understand, please try again
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_purchasing_section:
+  - text: |-
+      - Choose from categories for sale 
+      - Choose from brands for sale
+      - Info
+      - Back
+  utter_general_info:
+  - text: |-
+      - Information about categories for sale 
+      - Information about brands for sale
+      - Back
+  utter_ask_category:
+  - text: 'Select a category:'
+  utter_ask_brand:
+  - text: 'Select a brand:'
+  utter_ask_product_id:
+  - text: Please, select product id
+  utter_ask_product_model:
+  - text: Please, select product model
+  utter_ask_email:
+  - text: Please, enter your email
+  utter_ask_price:
+  - text: Please, enter product price
+  utter_ask_confirm_purchase:
+  - text: |-
+      - Selected product: {product_id}
+      - email: {email}
+      Confirm?
+  utter_ask_confirm_selling:
+  - text: |-
+      - Registered data product: 
+         - Model: {product_model}
+         - Category: {category}
+         - Brand: {brand}
+         - Price: {price}
+         - Email: {email} 
+      Confirm?
+  utter_ask_confirm_auth:
+  - text: |-
+      - Your email: {email}
+      Confirm?
+  utter_restart:
+  - text: Conversation reset
+  utter_ask_if_buy_product:
+  - text: Do you want to buy a product?
+  utter_ask_if_sell_product:
+  - text: Do you want to sell a product?
+  utter_selected_category:
+  - text: Selected product {category}
+  utter_selected_brand:
+  - text: Selected brand {brand}
+  utter_insert_data:
+  - text: 'User Data:'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

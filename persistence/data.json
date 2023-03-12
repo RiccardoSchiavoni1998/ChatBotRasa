@@ -1,0 +1,395 @@
+{
+  "users": [
+    "user1@gmail.com",
+    "user2@gmail.com",
+    "user3@gmail.com",
+    "user4@gmail.com",
+    "user5@gmail.com",
+    "user6@gmail.com",
+    "user7@gmail.com",
+    "user8@gmail.com",
+    "user9@gmail.com",
+    "user10@gmail.com"
+  ],
+
+  "list_brands": [
+    "HP",
+    "Lenovo",
+    "Acer",
+    "Asus",
+    "Apple",
+    "Microsoft",
+    "MSI",
+    "Samsung",
+    "Xiaomi",
+    "Huawei",
+    "Razer"
+  ],
+  "list_categories": [
+    "Phone",
+    "Tablet",
+    "Computer"
+  ],
+  "products": [
+    {
+      "model": "0",
+      "id": "PAP1",
+      "category": "Phone",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "1",
+      "id": "PAP2",
+      "category": "Phone",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user3@gmail.com",
+      "owner": "user9@gmail.com"
+    },
+    {
+      "model": "2",
+      "id": "PAP3",
+      "category": "Phone",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user4@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "3",
+      "id": "PAP4",
+      "category": "Phone",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user4@gmail.com"
+    },
+    {
+      "model": "4",
+      "id": "PSA1",
+      "category": "Phone",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user2@gmail.com"
+    },
+    {
+      "model": "5",
+      "id": "PSA2",
+      "category": "Phone",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "6",
+      "id": "PSA3",
+      "category": "Phone",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "7",
+      "id": "PSA4",
+      "category": "Phone",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user4@gmail.com",
+      "owner": "user2@gmail.com"
+    },
+    {
+      "model": "8",
+      "id": "PXI1",
+      "category": "Phone",
+      "brand": "Xiaomi",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user5@gmail.com"
+    },
+    {
+      "model": "9",
+      "id": "PXI2",
+      "category": "Phone",
+      "brand": "Xiaomi",
+      "price": "500.0",
+      "seller": "user3@gmail.com",
+      "owner": "user10@gmail.com"
+    },
+    {
+      "model": "10",
+      "id": "PXI3",
+      "category": "Phone",
+      "brand": "Xiaomi",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user8@gmail.com"
+    },
+    {
+      "model": "11",
+      "id": "PXI4",
+      "category": "Phone",
+      "brand": "Xiaomi",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user8@gmail.com"
+    },
+    {
+      "model": "12",
+      "id": "PHU1",
+      "category": "Phone",
+      "brand": "Huawei",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "13",
+      "id": "PHU2",
+      "category": "Phone",
+      "brand": "Huawei",
+      "price": "500.0",
+      "seller": "user4@gmail.com",
+      "owner": "user4@gmail.com"
+    },
+    {
+      "model": "14",
+      "id": "PHU3",
+      "category": "Phone",
+      "brand": "Huawei",
+      "price": "500.0",
+      "seller": "user4@gmail.com",
+      "owner": "user4@gmail.com"
+    },
+    {
+      "model": "15",
+      "id": "PHU4",
+      "category": "Phone",
+      "brand": "Huawei",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user5@gmail.com"
+    },
+    {
+      "model": "16",
+      "id": "CHP1",
+      "category": "Computer",
+      "brand": "Hewlett-Packard (HP)",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "17",
+      "id": "CHP2",
+      "category": "Computer",
+      "brand": "Hewlett-Packard (HP)",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user5@gmail.com"
+    },
+    {
+      "model": "18",
+      "id": "CHP3",
+      "category": "Computer",
+      "brand": "Hewlett-Packard (HP)",
+      "price": "1000.0",
+      "seller": "user3@gmail.com",
+      "owner": "user3@gmail.com"
+    },
+    {
+      "model": "19",
+      "id": "CHP4",
+      "category": "Computer",
+      "brand": "Hewlett-Packard (HP)",
+      "price": "1000.0",
+      "seller": "user4@gmail.com",
+      "owner": "user4@gmail.com"
+    },
+    {
+      "model": "20",
+      "id": "CAC1",
+      "category": "Computer",
+      "brand": "Acer",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user3@gmail.com"
+    },
+    {
+      "model": "3",
+      "id": "CAC2",
+      "category": "Computer",
+      "brand": "Acer",
+      "price": "1000.0",
+      "seller": "user2@gmail.com",
+      "owner": "user5@gmail.com"
+    },
+    {
+      "model": "21",
+      "id": "CAC3",
+      "category": "Computer",
+      "brand": "Acer",
+      "price": "1000.0",
+      "seller": "user3@gmail.com",
+      "owner": "user3@gmail.com"
+    },
+    {
+      "model": "22",
+      "id": "CAC4",
+      "category": "Computer",
+      "brand": "Acer",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "23",
+      "id": "CMS1",
+      "category": "Computer",
+      "brand": "MSI",
+      "price": "1000.0",
+      "seller": "user4@gmail.com",
+      "owner": "user4@gmail.com"
+    },
+    {
+      "model": "24",
+      "id": "CMS2",
+      "category": "Computer",
+      "brand": "MSI",
+      "price": "1000.0",
+      "seller": "user2@gmail.com",
+      "owner": "user4@gmail.com"
+    },
+    {
+      "model": "25",
+      "id": "CMS3",
+      "category": "Computer",
+      "brand": "MSI",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user3@gmail.com"
+    },
+    {
+      "model": "26",
+      "id": "CMS4",
+      "category": "Computer",
+      "brand": "MSI",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user3@gmail.com"
+    },
+    {
+      "model": "27",
+      "id": "CAS1",
+      "category": "Computer",
+      "brand": "Asus",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "28",
+      "id": "CAS2",
+      "category": "Computer",
+      "brand": "Asus",
+      "price": "1000.0",
+      "seller": "user4@gmail.com",
+      "owner": "user6@gmail.com"
+    },
+    {
+      "model": "29",
+      "id": "CAS3",
+      "category": "Computer",
+      "brand": "Asus",
+      "price": "1000.0",
+      "seller": "user4@gmail.com",
+      "owner": "user7@gmail.com"
+    },
+    {
+      "model": "30",
+      "id": "CAS4",
+      "category": "Computer",
+      "brand": "Asus",
+      "price": "1000.0",
+      "seller": "user1@gmail.com",
+      "owner": "user3@gmail.com"
+    },
+    {
+      "model": "31",
+      "id": "TAP1",
+      "category": "Tablet",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "32",
+      "id": "TAP2",
+      "category": "Tablet",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user2@gmail.com"
+    },
+    {
+      "model": "33",
+      "id": "TAP3",
+      "category": "Tablet",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user3@gmail.com"
+    },
+    {
+      "model": "34",
+      "id": "TAP4",
+      "category": "Tablet",
+      "brand": "Apple",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user1@gmail.com"
+    },
+    {
+      "model": "35",
+      "id": "TSA1",
+      "category": "Tablet",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user4@gmail.com",
+      "owner": "user9@gmail.com"
+    },
+    {
+      "model": "36",
+      "id": "TSA2",
+      "category": "Tablet",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user1@gmail.com",
+      "owner": "user2@gmail.com"
+    },
+    {
+      "model": "37",
+      "id": "TSA3",
+      "category": "Tablet",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user2@gmail.com",
+      "owner": "user2@gmail.com"
+    },
+    {
+      "model": "38",
+      "id": "TSA4",
+      "category": "Tablet",
+      "brand": "Samsung",
+      "price": "500.0",
+      "seller": "user5@gmail.com",
+      "owner": "user5@gmail.com"
+    }
+  ]
+}

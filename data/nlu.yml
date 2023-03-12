@@ -1,0 +1,331 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - ye
+    - yess
+    - y
+    - yep
+    - ok
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ys
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - user1@gmail.com
+    - {"email":"user1@gmail.com"}
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: go_back
+  examples: |
+    - back to menu
+    - come back
+    - back
+    - go back
+- intent: reset
+  examples: |
+    - stop
+    - stop form
+    - end
+    - end form
+    - deactivate
+    - deactivate form
+    - quit
+    - quit form
+    - reset
+    - reset all
+    - revert
+    - revert all
+    - restore
+    - restore all
+    - cancel data
+    - delete all
+    - delete data
+- intent: acquire_products
+  examples: |
+    - i want to buy
+    - i need buy
+    - buy
+    - i want to acquire
+    - acquire
+    - show me products
+    - prod
+    - products
+    - show me the products you have
+    - available products
+    - products for sale
+    - what products do you sell
+    - Buy
+    - choose
+- intent: selling_products
+  examples: |
+    - i want to sell
+    - i need sell
+    - sell
+    - i want to sale
+    - i need sale
+    - sale
+    - i want to selling
+    - i need selling
+    - selling
+    - selling product
+    - selling phone
+    - selling computer
+    - selling tablet
+    - selling my stuff
+    - sale product
+    - sale phone
+    - sale computer
+    - sale tablet
+    - sale my stuff
+    - sell product
+    - sell phone
+    - sell computer
+    - sell tablet
+    - sell my stuff
+- intent: general_info
+  examples: |
+    - general info
+    - info
+    - general information
+    - information
+    - infos
+    - general infos
+- intent: categories_info
+  examples: |
+    - show me category
+    - prod
+    - category
+    - show me the category you have
+    - available category
+    - category for sale
+    - what category do you sell
+    - categories
+    - catego
+- intent: brands_info
+  examples: |
+    - show me brands
+    - brand
+    - select_category
+    - show me the brands you have
+    - available brands
+    - brands for sale
+    - what brands do you sell
+    - brands
+    - info brands
+- intent: select_category
+  examples: |
+    - [phone]{"entity": "category", "group": "Phone"}
+    - i want to buy [phone]{"entity": "category", "group": "Phone"}
+    - i need [phone]{"entity": "category", "group": "Phone"}
+    - i want [phone]{"entity": "category", "group": "Phone"}
+    - buy [phone]{"entity": "category", "group": "Phone"}
+    - i want to acquire [phone]{"entity": "category", "group": "Phone"}
+    - acquire [phone]{"entity": "category", "group": "Phone"}
+    - [telephone]{"entity": "category", "group": "Phone"}
+    - i want to buy [telephone]{"entity": "category", "group": "Phone"}
+    - i need [telephone]{"entity": "category", "group": "Phone"}
+    - i want [telephone]{"entity": "category", "group": "Phone"}
+    - buy [telephone]{"entity": "category", "group": "Phone"}
+    - i want to acquire [telephone]{"entity": "category", "group": "Phone"}
+    - acquire [telephone]{"entity": "category", "group": "Phone"}
+    - [mobile phone]{"entity": "category", "group": "Phone"}
+    - i want to buy [mobile phone]{"entity": "category", "group": "Phone"}
+    - i need [mobile phone]{"entity": "category", "group": "Phone"}
+    - i want [mobile phone]{"entity": "category", "group": "Phone"}
+    - buy [mobile phone]{"entity": "category", "group": "Phone"}
+    - i want to acquire [mobile phone]{"entity": "category", "group": "Phone"}
+    - acquire [mobile phone]{"entity": "category", "group": "Phone"}
+    - [calling device]{"entity": "category", "group": "Phone"}
+    - i want to buy [calling device]{"entity": "category", "group": "Phone"}
+    - i need [calling device]{"entity": "category", "group": "Phone"}
+    - i want [calling device]{"entity": "category", "group": "Phone"}
+    - buy [calling device]{"entity": "category", "group": "Phone"}
+    - i want to acquire [calling device]{"entity": "category", "group": "Phone"}
+    - acquire [calling device]{"entity": "category", "group": "Phone"}
+    - [tablet]{"entity": "category", "group": "Tablet"}
+    - i want to buy [tablet]{"entity": "category", "group": "Tablet"}
+    - i need [tablet]{"entity": "category", "group": "Tablet"}
+    - i want [tablet]{"entity": "category", "group": "Tablet"}
+    - buy [tablet]{"entity": "category", "group": "Tablet"}
+    - i want to acquire [tablet]{"entity": "category", "group": "Tablet"}
+    - acquire [tablet]{"entity": "category", "group": "Tablet"}
+    - [iPad]{"entity": "category", "group": "Tablet"}
+    - i want to buy [iPad]{"entity": "category", "group": "Tablet"}
+    - i need [iPad]{"entity": "category", "group": "Tablet"}
+    - i want [iPad]{"entity": "category", "group": "Tablet"}
+    - buy [iPad]{"entity": "category", "group": "Tablet"}
+    - i want to acquire [iPad]{"entity": "category", "group": "Tablet"}
+    - acquire [iPad]{"entity": "category", "group": "Tablet"}
+    - [pc]{"entity": "category", "group": "Computer"}
+    - i want to buy [pc]{"entity": "category", "group": "Computer"}
+    - i need [pc]{"entity": "category", "group": "Computer"}
+    - i want [pc]{"entity": "category", "group": "Computer"}
+    - buy [pc]{"entity": "category", "group": "Computer"}
+    - i want to acquire [pc]{"entity": "category", "group": "Computer"}
+    - acquire [pc]{"entity": "category", "group": "Computer"}
+    - [personal computer]{"entity": "category", "group": "Computer"}
+    - i want to buy [personal computer]{"entity": "category", "group": "Computer"}
+    - i need [personal computer]{"entity": "category", "group": "Computer"}
+    - i want [personal computer]{"entity": "category", "group": "Computer"}
+    - buy [personal computer]{"entity": "category", "group": "Computer"}
+    - i want to acquire [personal computer]{"entity": "category", "group": "Computer"}
+    - acquire [personal computer]{"entity": "category", "group": "Computer"}
+    - [computer]{"entity": "category", "group": "Computer"}
+    - i want to buy [computer]{"entity": "category", "group": "Computer"}
+    - i need [computer]{"entity": "category", "group": "Computer"}
+    - i want [computer]{"entity": "category", "group": "Computer"}
+    - buy [computer]{"entity": "category", "group": "Computer"}
+    - i want to acquire [computer]{"entity": "category", "group": "Computer"}
+    - acquire [computer]{"entity": "category", "group": "Computer"}
+    - buy [phn]{"entity": "category", "group": "Computer"}
+- intent: select_brand
+  examples: |
+    - [hewlett-packard]{"entity": "brand", "group": "HP"}
+    - [lenovo]{"entity": "brand", "group": "Lenovo"}
+    - [acer]{"entity": "brand", "group": "Acer"}
+    - [asus]{"entity": "brand", "group": "Asus"}
+    - [apple]{"entity": "brand", "group": "Apple"}
+    - [microsoft]{"entity": "brand", "group": "Microsoft"}
+    - [msi]{"entity": "brand", "group": "MSI"}
+    - [samsung]{"entity": "brand", "group": "Samsung"}
+    - [xiaomi]{"entity": "brand", "group": "Xiaomi"}
+    - [huawei]{"entity": "brand", "group": "Huawei"}
+    - [razer]{"entity": "brand", "group": "Razer"}
+    - i need [hewlett-packard]{"entity": "brand", "group": "HP"}
+    - i need [lenovo]{"entity": "brand", "group": "Lenovo"}
+    - i need [acer]{"entity": "brand", "group": "Acer"}
+    - i need [asus]{"entity": "brand", "group": "Asus"}
+    - i need [apple]{"entity": "brand", "group": "Apple"}
+    - i need [microsoft]{"entity": "brand", "group": "Microsoft"}
+    - i need [msi]{"entity": "brand", "group": "MSI"}
+    - i need [samsung]{"entity": "brand", "group": "Samsung"}
+    - i need [xiaomi]{"entity": "brand", "group": "Xiaomi"}
+    - i need [huawei]{"entity": "brand", "group": "Huawei"}
+    - i need [razer]{"entity": "brand", "group": "Razer"}
+    - i want [lenovo]{"entity": "brand", "group": "Lenovo"}
+    - i want [acer]{"entity": "brand", "group": "Acer"}
+    - i want [asus]{"entity": "brand", "group": "Asus"}
+    - i want [apple]{"entity": "brand", "group": "Apple"}
+    - i want [microsoft]{"entity": "brand", "group": "Microsoft"}
+    - i want [msi]{"entity": "brand", "group": "MSI"}
+    - i want [samsung]{"entity": "brand", "group": "Samsung"}
+    - i want [xiaomi]{"entity": "brand", "group": "Xiaomi"}
+    - i want [huawei]{"entity": "brand", "group": "Huawei"}
+    - i want [razer]{"entity": "brand", "group": "Razer"}
+    - acquire [hewlett-packard]{"entity": "brand", "group": "HP"}
+    - acquire [lenovo]{"entity": "brand", "group": "Lenovo"}
+    - acquire [acer]{"entity": "brand", "group": "Acer"}
+    - acquire [asus]{"entity": "brand", "group": "Asus"}
+    - acquire [apple]{"entity": "brand", "group": "Apple"}
+    - acquire [microsoft]{"entity": "brand", "group": "Microsoft"}
+    - acquire [msi]{"entity": "brand", "group": "MSI"}
+    - acquire [samsung]{"entity": "brand", "group": "Samsung"}
+    - acquire [xiaomi]{"entity": "brand", "group": "Xiaomi"}
+    - acquire [huawei]{"entity": "brand", "group": "Huawei"}
+    - acquire [razer]{"entity": "brand", "group": "Razer"}
+    - buy [hewlett-packard]{"entity": "brand", "group": "HP"}
+    - buy [lenovo]{"entity": "brand", "group": "Lenovo"}
+    - buy [acer]{"entity": "brand", "group": "Acer"}
+    - buy [asus]{"entity": "brand", "group": "Asus"}
+    - buy [apple]{"entity": "brand", "group": "Apple"}
+    - buy [microsoft]{"entity": "brand", "group": "microsoft"}
+    - buy [msi]{"entity": "brand", "group": "MSI"}
+    - buy [samsung]{"entity": "brand", "group": "Samsung"}
+    - buy [xiaomi]{"entity": "brand", "group": "Xiaomi"}
+    - buy [huawei]{"entity": "brand", "group": "Huawei"}
+    - buy [razer]{"entity": "brand", "group": "Razer"}
+    - [Apple]{"entity": "brand", "group": "Apple"}
+- intent: control_products
+  examples: |
+    - purchases
+    - my purchases
+    - last purchases
+    - all purchases
+    - all my purchases
+    - orders
+    - my orders
+    - last orders
+    - all orders
+    - all my orders
+    - control my stuff
+    - check my stuff
+    - my stuff
+    - my products
+    - control products
+    - check products
+    - control prod
+    - control

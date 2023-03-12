@@ -1,0 +1,81 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+ 
+
+- rule: Activate purchase form
+  steps:
+  - action: utter_ask_if_buy_product
+  - intent: affirm
+  - action: purchase_form
+  - active_loop: purchase_form  
+  wait_for_user_input: false
+
+- rule: Submit purchase form
+  condition:
+  - active_loop: purchase_form
+  steps:
+  - action: purchase_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_save_purchase
+  - action: action_restart
+  
+
+- rule: Activate selling form
+  steps:
+  - action: selling_form
+  - active_loop: selling_form  
+  wait_for_user_input: false
+
+- rule: Submit selling form
+  condition:
+  - active_loop: selling_form
+  steps:
+  - action: selling_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_save_selling
+  - action: action_restart
+  
+
+- rule: Activate auth form
+  steps:
+  - action: auth_form
+  - active_loop: auth_form  
+  wait_for_user_input: false
+
+
+- rule: Submit history form
+  condition:
+  - active_loop: auth_form
+  steps:
+  - action: auth_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: show_own_product_list
+
+- rule: Reset all
+  steps:
+  - intent: reset
+  - action: action_restart
+  
+
+- rule: Retry
+  steps:
+  - intent: nlu_fallback
+  - action: utter_retry
+
